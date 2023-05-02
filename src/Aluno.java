@@ -19,8 +19,9 @@ public class Aluno {
     private Curso curso;
     private List<Disciplina> diciplina;
     
-    public class matricularDiciplina(List<Disciplina> disciplina){
-        
+    public class matricularDiciplina(Disciplina disciplina){
+    
+            
     }
 
     public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> diciplina, List<Disciplina> disciplina) {
