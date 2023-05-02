@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -17,11 +18,15 @@ public class Aluno {
     private String nome;
     private String matricula;
     private Curso curso;
-    private List<Disciplina> diciplina;
+    private List<Disciplina> matricularDiciplina;
     
-    public class matricularDiciplina(Disciplina disciplina){
     
-            
+    public Aluno(){
+    matricularDiciplina = new ArrayList<>();
+}
+    
+    public void matricularDiciplina(Disciplina disciplina){
+        matricularDiciplina.add(disciplina);
     }
 
     public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> diciplina, List<Disciplina> disciplina) {
