@@ -19,10 +19,12 @@ public class Curso {
     public Curso() {
     }
 
-    public Curso(int codigo, String nome) {
+    public Curso(int codigo, String nome, List<Disciplina> disciplinas) {
         this.codigo = codigo;
         this.nome = nome;
+        this.disciplinas = disciplinas;
     }
+
 
     public int getCodigo() {
         return codigo;
@@ -38,6 +40,14 @@ public class Curso {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
     }
 
     @Override
