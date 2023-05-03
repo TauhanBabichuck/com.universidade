@@ -1,43 +1,45 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Escola
  */
 public class Aluno {
-    
+
     private int codigo;
     private String nome;
     private String matricula;
     private Curso curso;
     private List<Disciplina> matricularDiciplina;
-    
-    
-    public Aluno(){
-    matricularDiciplina = new ArrayList<>();
-    
-}
-    
-    public void matricularDiciplina(Disciplina disciplina){
-        
-        if((matricularDiciplina.size() < 5 )&&(!matricularDiciplina.contains(disciplina))){
-        matricularDiciplina.add(disciplina);
-        
-    }else{
-    System.out.println("disciplina nao pode ser add");
 
+    public Aluno() {
+        matricularDiciplina = new ArrayList<>();
 
-            }
-}
+    }
 
+    public void matricularDiciplina(Disciplina disciplina) {
+
+        if ((matricularDiciplina.size() < 5) && (!matricularDiciplina.contains(disciplina))) {
+            matricularDiciplina.add(disciplina);
+
+        } else {
+            System.out.println("disciplina nao pode ser add");
+
+        }
+    }
+
+    public void ListarDiciplina(Aluno aluno) {
+        JOptionPane.showConfirmDialog(null, "Aluno matriculado em: \n" + matricularDiciplina);
+
+    }
 
     public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> matricularDiciplina) {
         this.codigo = codigo;
@@ -89,14 +91,9 @@ public class Aluno {
         this.curso = curso;
     }
 
-
-
     @Override
     public String toString() {
         return "Aluno{" + "codigo=" + codigo + ", nome=" + nome + ", matricula=" + matricula + ", curso=" + curso + ", matricularDiciplina=" + matricularDiciplina + '}';
     }
 
-
 }
-
-    
