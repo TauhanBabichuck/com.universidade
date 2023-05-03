@@ -34,8 +34,10 @@ public class Aluno {
     }else{
     System.out.println("disciplina nao pode ser add");
 
+
             }
 }
+
 
     public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> matricularDiciplina) {
         this.codigo = codigo;
@@ -43,6 +45,16 @@ public class Aluno {
         this.matricula = matricula;
         this.curso = curso;
         this.matricularDiciplina = matricularDiciplina;
+
+    }
+
+    public List<Disciplina> getMatricularDiciplina() {
+        return matricularDiciplina;
+    }
+
+    public void setMatricularDiciplina(List<Disciplina> matricularDiciplina) {
+        this.matricularDiciplina = matricularDiciplina;
+
     }
 
     public int getCodigo() {
@@ -77,19 +89,14 @@ public class Aluno {
         this.curso = curso;
     }
 
-    public List<Disciplina> getMatricularDiciplina() {
-        return matricularDiciplina;
-    }
 
-    public void setMatricularDiciplina(List<Disciplina> matricularDiciplina) {
-        this.matricularDiciplina = matricularDiciplina;
-    }
 
     @Override
     public String toString() {
         return "Aluno{" + "codigo=" + codigo + ", nome=" + nome + ", matricula=" + matricula + ", curso=" + curso + ", matricularDiciplina=" + matricularDiciplina + '}';
     }
-    
+
+
 }
 
     
