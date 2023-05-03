@@ -29,13 +29,22 @@ public class Aluno {
         matricularDiciplina.add(disciplina);
     }
 
-    public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> diciplina, List<Disciplina> disciplina) {
+    public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> matricularDiciplina) {
         this.codigo = codigo;
         this.nome = nome;
         this.matricula = matricula;
         this.curso = curso;
-        this.diciplina = diciplina;
-        this.disciplina = disciplina;
+        this.matricularDiciplina = matricularDiciplina;
+    }
+
+    
+
+    public List<Disciplina> getMatricularDiciplina() {
+        return matricularDiciplina;
+    }
+
+    public void setMatricularDiciplina(List<Disciplina> matricularDiciplina) {
+        this.matricularDiciplina = matricularDiciplina;
     }
 
     public int getCodigo() {
@@ -70,25 +79,10 @@ public class Aluno {
         this.curso = curso;
     }
 
-    public List<Disciplina> getDiciplina() {
-        return diciplina;
-    }
-
-    public void setDiciplina(List<Disciplina> diciplina) {
-        this.diciplina = diciplina;
-    }
-
-    public List<Disciplina> getDisciplina() {
-        return disciplina;
-    }
-
-    public void setDisciplina(List<Disciplina> disciplina) {
-        this.disciplina = disciplina;
-    }
-
     @Override
     public String toString() {
-        return "Aluno{" + "codigo=" + codigo + ", nome=" + nome + ", matricula=" + matricula + ", curso=" + curso + ", diciplina=" + diciplina + ", disciplina=" + disciplina + '}';
+        return "Aluno{" + "codigo=" + codigo + ", nome=" + nome + ", matricula=" + matricula + ", curso=" + curso + ", matricularDiciplina=" + matricularDiciplina + '}';
     }
-    
+
+
 }
