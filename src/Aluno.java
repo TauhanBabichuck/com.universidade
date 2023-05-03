@@ -18,17 +18,17 @@ public class Aluno {
     private String nome;
     private String matricula;
     private Curso curso;
-    private List<Disciplina> matricularDiciplina;
+    private List<Disciplina> DisciplinasMatriculadas;
 
     public Aluno() {
-        matricularDiciplina = new ArrayList<>();
+        DisciplinasMatriculadas = new ArrayList<>();
 
     }
 
     public void matricularDiciplina(Disciplina disciplina) {
 
-        if ((matricularDiciplina.size() < 5) && (!matricularDiciplina.contains(disciplina))) {
-            matricularDiciplina.add(disciplina);
+        if ((DisciplinasMatriculadas.size() < 5) && (!DisciplinasMatriculadas.contains(disciplina))) {
+            DisciplinasMatriculadas.add(disciplina);
 
         } else {
             System.out.println("disciplina nao pode ser add");
@@ -36,9 +36,9 @@ public class Aluno {
         }
     }
 
-    public void ListarDiciplina(Aluno aluno) {
-        JOptionPane.showConfirmDialog(null, "Aluno matriculado em: \n" + matricularDiciplina);
-
+    public void ListarDiciplinas() {
+        JOptionPane.showConfirmDialog(null, "Aluno matriculado em: \n" + DisciplinasMatriculadas);
+        System.out.println("FALTAM"+(curso.getDisciplinas().size()-this.DisciplinasMatriculadas.size()));
     }
 
     public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> matricularDiciplina) {
@@ -46,16 +46,16 @@ public class Aluno {
         this.nome = nome;
         this.matricula = matricula;
         this.curso = curso;
-        this.matricularDiciplina = matricularDiciplina;
+        this.DisciplinasMatriculadas = matricularDiciplina;
 
     }
 
     public List<Disciplina> getMatricularDiciplina() {
-        return matricularDiciplina;
+        return DisciplinasMatriculadas;
     }
 
     public void setMatricularDiciplina(List<Disciplina> matricularDiciplina) {
-        this.matricularDiciplina = matricularDiciplina;
+        this.DisciplinasMatriculadas = matricularDiciplina;
 
     }
 
@@ -93,7 +93,7 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "Aluno{" + "codigo=" + codigo + ", nome=" + nome + ", matricula=" + matricula + ", curso=" + curso + ", matricularDiciplina=" + matricularDiciplina + '}';
+        return "Aluno{" + "codigo=" + codigo + ", nome=" + nome + ", matricula=" + matricula + ", curso=" + curso + ", matricularDiciplina=" + DisciplinasMatriculadas + '}';
     }
 
 }
