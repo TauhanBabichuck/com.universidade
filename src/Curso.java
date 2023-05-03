@@ -14,7 +14,7 @@ import java.util.List;
 public class Curso {
     private int codigo;
     private String nome;
-    private List<Diciplina>diciplinas;
+    private List<Disciplina>disciplinas;
 
     public Curso() {
     }

@@ -23,11 +23,21 @@ public class Aluno {
     
     public Aluno(){
     matricularDiciplina = new ArrayList<>();
+    
 }
     
     public void matricularDiciplina(Disciplina disciplina){
+        
+        if((matricularDiciplina.size() < 5 )&&(!matricularDiciplina.contains(disciplina))){
         matricularDiciplina.add(disciplina);
-    }
+        
+    }else{
+    System.out.println("disciplina nao pode ser add");
+
+
+            }
+}
+
 
     public Aluno(int codigo, String nome, String matricula, Curso curso, List<Disciplina> matricularDiciplina) {
         this.codigo = codigo;
@@ -35,9 +45,8 @@ public class Aluno {
         this.matricula = matricula;
         this.curso = curso;
         this.matricularDiciplina = matricularDiciplina;
-    }
 
-    
+    }
 
     public List<Disciplina> getMatricularDiciplina() {
         return matricularDiciplina;
@@ -45,6 +54,7 @@ public class Aluno {
 
     public void setMatricularDiciplina(List<Disciplina> matricularDiciplina) {
         this.matricularDiciplina = matricularDiciplina;
+
     }
 
     public int getCodigo() {
@@ -79,6 +89,8 @@ public class Aluno {
         this.curso = curso;
     }
 
+
+
     @Override
     public String toString() {
         return "Aluno{" + "codigo=" + codigo + ", nome=" + nome + ", matricula=" + matricula + ", curso=" + curso + ", matricularDiciplina=" + matricularDiciplina + '}';
@@ -86,3 +98,5 @@ public class Aluno {
 
 
 }
+
+    
